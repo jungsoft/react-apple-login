@@ -24,7 +24,6 @@ export interface AppleLoginProps {
   callback?: (d: any) => void;
   render?: (props: {
     onClick: (e?: any) => void;
-    disabled?: boolean;
   }) => JSX.Element;
 }
 
