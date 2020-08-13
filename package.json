@@ -1,10 +1,10 @@
 {
-  "name": "react-apple-login",
+  "name": "@jungsoft/react-apple-login",
   "version": "1.0.13",
-  "description": "A Apple Log-in Component for React",
+  "description": "A Apple Log-in Component for React that supports custom rendering",
   "author": "Mayank Patel <patelmayankce@gmail.com>",
   "license": "MIT",
-  "repository": "patelmayankce/react-apple-login",
+  "repository": "jungsoft/react-apple-login",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
