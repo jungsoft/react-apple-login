@@ -16,6 +16,7 @@ export interface AppleLoginProps {
   callback?: (d: any) => void;
   render?: (props: {
     onClick: (e?: any) => void;
+    renderButton: () => void;
   }) => JSX.Element;
 }
 
@@ -85,7 +86,10 @@ const AppleLogin = (props: AppleLoginProps) => {
   }, []);
 
   if (typeof render === "function") {
-    return render({ onClick });
+    return render({
+      onClick,
+      renderButton: () => <AppleButton designProp={designProp} />
+     });
   }
 
   return (
