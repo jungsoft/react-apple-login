@@ -15,3 +15,15 @@ declare module '*.svg' {
   export default svgUrl;
   export { svgComponent as ReactComponent }
 }
+
+export interface DesignProp {
+  // REF: https://developer.apple.com/documentation/signinwithapplejs/incorporating_sign_in_with_apple_into_other_platforms
+  height?: number;
+  width?: number;
+  color?: string | "white" | "black";
+  border?: boolean;
+  type?: string | "sign-in" | "continue";
+  border_radius?: number;
+  scale?: number;
+  locale?: string;
+}

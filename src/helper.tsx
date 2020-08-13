@@ -1,4 +1,3 @@
-
 const generateQueryString = (q: any) => {
   let queryString = '';
   if (q) {

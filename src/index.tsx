@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { generateQueryString } from "./helper";
+import AppleButton from "./AppleButton";
+import { DesignProp } from "./typings";
 
 export interface AppleLoginProps {
   clientId: string;
@@ -10,17 +12,7 @@ export interface AppleLoginProps {
   responseType?: string | "code" | "id_token";
   responseMode?: string | "query" | "fragment" | "form_post";
   nonce?: string;
-  designProp?: {
-    // REF: https://developer.apple.com/documentation/signinwithapplejs/incorporating_sign_in_with_apple_into_other_platforms
-    height?: number;
-    width?: number;
-    color?: string | "white" | "black";
-    border?: boolean;
-    type?: string | "sign-in" | "continue";
-    border_radius?: number;
-    scale?: number;
-    locale?: string;
-  };
+  designProp?: DesignProp;
   callback?: (d: any) => void;
   render?: (props: {
     onClick: (e?: any) => void;
@@ -98,11 +90,7 @@ const AppleLogin = (props: AppleLoginProps) => {
 
   return (
     <div id="appleid-signin" onClick={onClick}>
-      <img
-        src={`https://appleid.cdn-apple.com/appleid/button?${generateQueryString(
-          designProp
-        )}`}
-      />
+      <AppleButton designProp={designProp} />
     </div>
   );
 };
